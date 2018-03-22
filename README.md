@@ -1,6 +1,6 @@
 # crashdump
 
-Do something before the main node process terminates
+Do something before the main node process terminates. You meed to explicitly call `process.exit()` when you're application completes or it won't exit as the `process.stdin.resume()` used by this module will keep the event loop busy.
 
 ## Installation
 
