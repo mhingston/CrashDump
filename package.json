@@ -1,0 +1,12 @@
+{
+  "name": "crashdump",
+  "version": "1.0.0",
+  "description": "Do something before the main node process terminates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mark Hingston <git@mail.bitshift.cc>",
+  "license": "MIT"
+}
