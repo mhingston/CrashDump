@@ -2,9 +2,9 @@ const CrashDump = (fn) =>
 {
     process.stdin.resume();
 
-    const beforeExit = async () =>
+    const beforeExit = async (...args) =>
     {
-        await fn();
+        await fn(...args);
         process.exit();
     }
 
@@ -13,6 +13,7 @@ const CrashDump = (fn) =>
     process.on('SIGTERM', beforeExit);
     process.on('SIGINT', beforeExit);
     process.on('SIGHUP', beforeExit);
+    return beforeExit;
 }
 
 module.exports = CrashDump;
