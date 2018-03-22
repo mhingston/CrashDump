@@ -27,4 +27,5 @@ const myFunc = async () =>
 
 require('crashdump')(myFunc);
 throw new Error('http://knowyourmeme.com/memes/this-is-fine');
+process.exit() // never reached
 ```
